@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Spartan:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -17,7 +18,7 @@ nav{
 }
 
 .logo a{
-    color: white;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 2rem;
@@ -38,7 +39,7 @@ nav{
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     letter-spacing: .1rem;
 
@@ -82,6 +83,9 @@ nav{
 }
 
 @media screen and (max-width:768px) {
+    html{
+        font-size:45% ;
+    }
     .nav-links{
         position:absolute;
         right: 0px;
@@ -109,7 +113,7 @@ nav{
         display:none;
     }
     .home{
-        transition: transform 0.5s ease-out;
+        transition: transform 0.5 ease-in;
     }
 }
 
@@ -131,7 +135,7 @@ nav{
 }
 
 .toggle.line1{
-    transform: rotate(-45deg) translet(-5px,6px);
+    transform: rotate(-45deg) translateX(-5px,6px);
 }
 
 .toggle.line2{
@@ -139,12 +143,8 @@ nav{
 }
 
 .toggle.line3{
-    transform: rotate(45deg)translet(-5px,-6px);
+    transform: rotate(45deg)translateY(-5px,-6px);
 }
-
-
-/* Notes */
-
 
 .heading{
     font-size:3.00rem;
@@ -155,70 +155,18 @@ nav{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-
-/* Image */
-
-
-.classesimg img{
+.eventimg img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
 
-.classesimg {
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    padding: 1rem 1rem 1rem 1rem;
-}
-
-/* Table */
-
-.content-table{
-    border-collapse: collapse;
-    font-size: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    border-radius: 5px 5px 5px 5px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
-
-.content-table thead tr{
-    background-color:rgb(43,43,46);
-    color: white;
-    text-align: left;
-    font-weight: bold;
-
-}
-
-.content-table th,
-.content-table td{
-    padding: 1rem 1rem;
-}
-
-.content-table tbody tr{
-    border-bottom: 1px solid #fff;
-}
-
-.content-table tbody tr:nth-of-type(even){
-    background-color: #f3f3f3;
-}
-
-.content-table tbody tr:last-of-types{
-    border-bottom: 2px solid rgb(43,43,46);
-}
-
-.content-table tr{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem;
-}
-
-.content-table tr td{
-    font-family: 'Barlow Condensed', sans-serif;
-    letter-spacing: .1rem;
+.notification p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.3rem;
 }
 
 /* Footer */
@@ -233,6 +181,7 @@ footer{
     width: 100%;
     font-family: "Open Sans";
     padding-top: 4rem;
+    min-width: auto;
     color: #fff;
 }
 .footer-content{
@@ -293,3 +242,86 @@ footer{
     opacity: .4;
     font-weight: 200;
 }
+
+/* Footer */
+
+footer{
+    /* position: ; */
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 4rem;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 1.3rem;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 1.3rem;
+    word-spacing: .1rem;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* html,body {height:100%;}
+body {margin:0;}
+.outer {
+    display:table;
+    width:100%;
+    height:100%;
+}
+header,main,footer {display:table-row;}
+header,footer {height:1px;} */
